@@ -1,18 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:wght@300;400;700&display=swap');
 
 body {
+  width: 100vw;
+
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  background-color: crimson;
 }
 
 .topo {
-  width: 414px;
+  width: 100%;
   height: 92px;
   background-color: #CF2B2B;
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  box-shadow: 0px 7px 12px -6px #000000;
+
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 h1 {
@@ -37,12 +47,16 @@ h2 {
   background-color: #E5E5E5;
   width: 414px;
   box-sizing: border-box;
-  padding-top: 31px;
+  padding-top: 123px;
 }
 
 .prato {
   margin-left: 19px;
   margin-bottom: 27px;
+}
+
+.conteudo > :last-child {
+  margin-bottom: 108px;
 }
 
 h3 {
@@ -71,6 +85,8 @@ h3 {
 
   background-color: #FFFFFF;
   border-radius: 9px;
+
+  box-shadow: 0px 0px 9px -4px #000000;
 }
 
 .card img {
@@ -104,4 +120,45 @@ p {
   line-height: 18.75px;
   color: #000000;
   margin: 0;
+}
+
+.base {
+  width: 100%;
+  height: 92px;
+  background-color: #FFFFFF;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow: 0px 7px 12px -6px #000000;
+
+  position: fixed;
+  bottom: 0;
+  left: 0
+}
+
+.base .botao {
+  width: 364px;
+  height: 61px;
+  border-radius: 50px;
+  background-color:#CBCBCB;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.botao p {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23.44px;
+  color: #FFFFFF;
+  text-align: center;
+  margin: 0;
+
+  box-sizing: border-box;
+  padding: 0 75px;
+
 }
