@@ -50,7 +50,9 @@ h2 {
   padding-top: 123px;
 }
 
-.prato {
+.prato,
+.bebida,
+.sobremesa {
   margin-bottom: 27px;
 }
 
@@ -92,7 +94,17 @@ h3 {
   box-shadow: 0px 0px 9px -4px #000000;
 }
 
+.selected {
+  box-shadow: 0px 0px 0px 5px #32B72F inset;
+}
+
 .card img {
+  width: 144px;
+  height: 87px;
+  border-radius: 4px;
+  object-fit: cover;
+
+
   margin-bottom: 8px;
 }
 
