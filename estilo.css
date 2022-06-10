@@ -51,7 +51,6 @@ h2 {
 }
 
 .prato {
-  margin-left: 19px;
   margin-bottom: 27px;
 }
 
@@ -65,15 +64,19 @@ h3 {
   font-size: 26px;
   line-height: 32.28px;
   margin-bottom: 17px;
+  margin-left: 19px;
 }
 
 .cards {
   display: flex;
+  align-items: center;
+  height: 220px;
   padding-right: 19px;
+  padding-left: 19px;
   overflow-x: scroll;
 }
 
-.cards :nth-child(-n+2) {
+.cards > :nth-child(-n+2) {
   margin-right: 16px;
 }
 
