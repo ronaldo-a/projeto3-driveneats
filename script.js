@@ -1,17 +1,51 @@
-function selector() {
-  let cartao = document.querySelector('.prato .card')
+//comentário com uma linha
+/*comentário de várias linhas*/
 
-  cartao.classList.add('selected')
+let pratoClicado
+let bebidaClicado
+let sobremesaClicado
+
+function pratoSelector(element) {
+  pratoClicado = element.innerHTML
+
+  let cardClicado = document.querySelector('.prato .selected')
+  if (cardClicado !== null) {
+    cardClicado.classList.remove('selected')
+  }
+
+  element.classList.add('selected')
+
+  fecharPedido()
 }
 
-function selector1() {
-  let cartao = document.querySelector('.bebida .card')
+function bebidaSelector(element) {
+  bebidaClicado = element.innerHTML
 
-  cartao.classList.add('selected')
+  let cardClicado = document.querySelector('.bebida .selected')
+  if (cardClicado !== null) {
+    cardClicado.classList.remove('selected')
+  }
+
+  element.classList.add('selected')
+
+  fecharPedido()
 }
 
-function selector2() {
-  let cartao = document.querySelector('.sobremesa .card')
+function sobremesaSelector(element) {
+  sobremesaClicado = element.innerHTML
 
-  cartao.classList.add('selected')
+  let cardClicado = document.querySelector('.sobremesa .selected')
+  if (cardClicado !== null) {
+    cardClicado.classList.remove('selected')
+  }
+
+  element.classList.add('selected')
+
+  fecharPedido()
+}
+
+function fecharPedido() {
+  if (pratoClicado && bebidaClicado && sobremesaClicado) {
+    document.querySelector('.botao').classList.add('ativo')
+  }
 }
