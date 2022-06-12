@@ -153,6 +153,10 @@ p {
   left: 0
 }
 
+a {
+  text-decoration: none;
+}
+
 .botao {
   width: 364px;
   height: 61px;
