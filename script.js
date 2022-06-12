@@ -77,5 +77,7 @@ function enviarPedido() {
 Total: R$ ${preco}`
 
   let msg = encodeURIComponent(text)
-  console.log(msg)
+  msg = 'https://wa.me/5584988516728?text=' + msg
+
+  document.querySelector('a').setAttribute('href', msg)
 }
