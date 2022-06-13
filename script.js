@@ -11,9 +11,11 @@ function pratoSelector(element) {
   let cardClicado = document.querySelector('.prato .selected')
   if (cardClicado !== null) {
     cardClicado.classList.remove('selected')
+    document.querySelector('.prato .checkyes').classList.remove('checkyes')
   }
 
   element.classList.add('selected')
+  document.querySelector('.prato .selected .check').classList.add('checkyes')
 
   fecharPedido()
 }
@@ -24,9 +26,11 @@ function bebidaSelector(element) {
   let cardClicado = document.querySelector('.bebida .selected')
   if (cardClicado !== null) {
     cardClicado.classList.remove('selected')
+    document.querySelector('.bebida .checkyes').classList.remove('checkyes')
   }
 
   element.classList.add('selected')
+  document.querySelector('.bebida .selected .check').classList.add('checkyes')
 
   fecharPedido()
 }
@@ -37,9 +41,13 @@ function sobremesaSelector(element) {
   let cardClicado = document.querySelector('.sobremesa .selected')
   if (cardClicado !== null) {
     cardClicado.classList.remove('selected')
+    document.querySelector('.sobremesa .checkyes').classList.remove('checkyes')
   }
 
   element.classList.add('selected')
+  document
+    .querySelector('.sobremesa .selected .check')
+    .classList.add('checkyes')
 
   fecharPedido()
 }
@@ -47,6 +55,7 @@ function sobremesaSelector(element) {
 function fecharPedido() {
   if (pratoClicado && bebidaClicado && sobremesaClicado) {
     document.querySelector('.botao').classList.add('ativo')
+    document.querySelector('.botao p').innerHTML = 'Fechar pedido'
   }
 }
 
@@ -77,7 +86,7 @@ function enviarPedido() {
 Total: R$ ${preco}`
 
   let msg = encodeURIComponent(text)
-  msg = 'https://wa.me/5584988516728?text=' + msg
+  msg = 'https://wa.me/5584981649145?text=' + msg
 
   document.querySelector('a').setAttribute('href', msg)
 }
